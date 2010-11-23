@@ -1,13 +1,13 @@
 #!/bin/sh
 HOSTS=`cat hosts.txt`
-SCRIPT="#!/bin/sh
+REMOTESCRIPT="#!/bin/sh
 INLINEKEYS=\"`cat keys.txt`\"
-`cat add-keys.sh`"
+`cat remote-script.sh`"
 
 for host in $HOSTS;
 do
     echo "local: Connecting to $host...";
-	ssh $host "$SCRIPT"
+	ssh $host "$REMOTESCRIPT"
 	echo "local: done.";
 	echo "";
 done
