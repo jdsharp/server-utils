@@ -1,0 +1,2 @@
+ssh-rsa AAAA...your-pub-key...== user@host.domain.com
+ssh-rsa AAAA...another-pub-key...== user@host.domain.com
